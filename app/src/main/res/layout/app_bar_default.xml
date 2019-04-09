@@ -46,9 +46,10 @@
         android:id="@+id/fab_bar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
         android:src="@drawable/ic_local_florist_black_24dp"
-        app:backgroundTint="@color/colorPrimary"
-        app:fabCustomSize="50dp"
+        app:backgroundTint="@color/colorAccent"
+        app:fabSize="normal"
         app:layout_anchor="@id/appbar"
         tools:ignore="VectorDrawableCompat" />
 

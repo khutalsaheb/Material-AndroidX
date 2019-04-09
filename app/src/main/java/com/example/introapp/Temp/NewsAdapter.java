@@ -17,12 +17,12 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder> {
-    private List<News> mNews;
+    private final List<News> mNews;
 
     private int mNumberItems;
 
-    private Context context;
-    private ChangeStatusListener listener;
+    private final Context context;
+    private final ChangeStatusListener listener;
 
     public NewsAdapter(Context context, int numberOfItems, ArrayList<News> news, ChangeStatusListener listener) {
         mNumberItems = numberOfItems;
@@ -33,7 +33,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
 
     class NewsViewHolder extends RecyclerView.ViewHolder {
 
-        TextView listItemNumberView;
+        final TextView listItemNumberView;
 
         NewsViewHolder(View itemView) {
             super(itemView);

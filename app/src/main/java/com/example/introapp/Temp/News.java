@@ -1,7 +1,7 @@
 package com.example.introapp.Temp;
 
 public class News {
-    private String mNewsTitle;
+    private final String mNewsTitle;
 
     public News(String title) {
         mNewsTitle = title;

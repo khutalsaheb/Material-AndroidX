@@ -32,10 +32,10 @@ public class MainDrawerActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, NewsAdapter.ChangeStatusListener {
 
     private Advance3DDrawerLayout drawer;
-    BottomAppBar bar;
+    private final int NUM_ITEMS = 100;
     private BottomSheetDialog bottomSheetDialog;
-    RecyclerView mNewsList;
-    public int NUM_ITEMS = 100;
+    private BottomAppBar bar;
+    private RecyclerView mNewsList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -165,10 +165,9 @@ public class MainDrawerActivity extends AppCompatActivity
         }
     }
 
-
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         // Handle navigation view item clicks here.
 
         drawer.closeDrawer(GravityCompat.START);
@@ -181,6 +180,7 @@ public class MainDrawerActivity extends AppCompatActivity
         return super.onCreateOptionsMenu(menu);
     }
 
+    @SuppressLint("RtlHardcoded")
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {

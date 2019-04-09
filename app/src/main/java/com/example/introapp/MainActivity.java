@@ -16,7 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
-    BottomAppBar bar;
+    private BottomAppBar bar;
     private BottomSheetDialog bottomSheetDialog;
 
     @Override

@@ -9,7 +9,7 @@ import com.google.android.material.button.MaterialButton;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
-    MaterialButton btn_login;
+    private MaterialButton btn_login;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
