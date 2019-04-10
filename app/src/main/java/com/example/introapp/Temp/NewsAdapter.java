@@ -67,7 +67,6 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
             @Override
             public void onClick(View v) {
                 listener.ChangeStatus(news);
-
             }
         });
 

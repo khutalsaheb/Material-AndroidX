@@ -1,21 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item
-        android:id="@+id/item1"
-        android:icon="@drawable/ic_search_white_24dp"
-        android:title="Item 1" />
-    <item
-        android:id="@+id/item2"
-        android:icon="@drawable/ic_search_white_24dp"
-        android:title="Item 2" />
-    <item
-        android:id="@+id/item3"
-        android:icon="@drawable/ic_search_white_24dp"
-        android:title="Item 3" />
-    <item
-        android:id="@+id/item4"
-        android:icon="@drawable/ic_search_white_24dp"
-        android:title="Item 4" />
+    <group
+        android:id="@+id/g1"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/item1"
+            android:title="Item  1" />
+    </group>
+    <group
+        android:id="@+id/g2"
+        android:checkableBehavior="single">
 
+        <item
+            android:id="@+id/item2"
+            android:title="Item 2" />
+    </group>
+    <group
+        android:id="@+id/g3"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/item3"
+            android:title="Item 3" />
+    </group>
+    <group
+        android:id="@+id/g4"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/item4"
+            android:title="Item 4" />
+    </group>
 </menu>

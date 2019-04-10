@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:backgroundTint="@color/colorAccent"
-        app:fabAlignmentMode="end"
+        app:fabAlignmentMode="center"
         app:fabCradleMargin="5dp"
         app:fabCradleRoundedCornerRadius="15dp"
         app:fabCradleVerticalOffset="5dp"
