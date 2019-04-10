@@ -16,7 +16,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
-    private BottomAppBar bar;
     private BottomSheetDialog bottomSheetDialog;
 
     @Override
@@ -26,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         //This will initialize the BottomAppBar
-        bar = findViewById(R.id.appbar);
+        BottomAppBar bar = findViewById(R.id.appbar);
 
         //This will add the OptionMenu to BottomAppBar
         bar.replaceMenu(R.menu.bottom_appbar_menu_primary);

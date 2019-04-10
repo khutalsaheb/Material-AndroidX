@@ -10,11 +10,6 @@ import com.example.introapp.LoginActivity;
 import java.util.HashMap;
 
 public class Session {
-    private final SharedPreferences pref;
-    private final SharedPreferences.Editor editor;
-    private final Context _context;
-
-
     // User name (make variable public to access from outside)
     public static final String KEY_NAME = "name";
     // Email address (make variable public to access from outside)
@@ -22,20 +17,18 @@ public class Session {
     public static final String KEY_DATA = "data";
     // All Shared Preferences Keys
     private static final String IS_LOGIN = "IsLoggedIn";
-    // Shared pref mode
-    int PRIVATE_MODE = 0;
-
-
     // Shared preferences file name
     private static final String PREF_NAME = "snow-intro-slider";
-
     private static final String IS_FIRST_TIME_LAUNCH = "IsFirstTimeLaunch";
+    private final SharedPreferences pref;
+    private final SharedPreferences.Editor editor;
+    private final Context _context;
+    // Shared pref mode
+    private int PRIVATE_MODE = 0;
 
     @SuppressLint("CommitPrefEdits")
     public Session(Context context) {
         this._context = context;
-        // shared pref mode
-        int PRIVATE_MODE = 0;
         pref = _context.getSharedPreferences(PREF_NAME, PRIVATE_MODE);
         editor = pref.edit();
     }
@@ -58,7 +51,7 @@ public class Session {
     }
 
     public HashMap<String, String> getUserDetail() {
-        HashMap<String, String> user = new HashMap<String, String>();
+        HashMap<String, String> user = new HashMap<>();
         // user name
         user.put(KEY_DATA, pref.getString(KEY_DATA, null));
 
@@ -110,7 +103,7 @@ public class Session {
      * Get stored session data
      */
     public HashMap<String, String> getUserDetails() {
-        HashMap<String, String> user = new HashMap<String, String>();
+        HashMap<String, String> user = new HashMap<>();
         // user name
         user.put(KEY_NAME, pref.getString(KEY_NAME, null));
 

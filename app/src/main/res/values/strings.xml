@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Intro Slider</string>
-    <string name="title_activity_welcome">Home Screen</string>
     <string name="next">NEXT</string>
     <string name="skip">SKIP</string>
     <string name="start">GOT IT</string>
@@ -16,8 +15,6 @@
 
     <string name="slide_4_title">World Travel</string>
     <string name="slide_4_desc">Book tickets of any transportation and travel the world!</string>
-    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
-    <string name="play_again">Play Again</string>
     <string name="forgot_password">Forgot Password</string>
     <string name="sign_in">Login</string>
     <string name="password">Password</string>
@@ -33,4 +30,6 @@
 
     <string name="action_right_drawer">Right Drawer</string>
     <string name="android_studio_android_com">android.studio@android.com</string>
+    <string name="notification">Notification</string>
+    <string name="menu">MENU</string>
 </resources>

@@ -9,13 +9,12 @@ import com.google.android.material.button.MaterialButton;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
-    private MaterialButton btn_login;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        btn_login = findViewById(R.id.btn_login);
+        MaterialButton btn_login = findViewById(R.id.btn_login);
         btn_login.setOnClickListener(this);
     }
 

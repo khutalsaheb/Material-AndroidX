@@ -18,11 +18,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder> {
     private final List<News> mNews;
-
-    private int mNumberItems;
-
     private final Context context;
     private final ChangeStatusListener listener;
+    private int mNumberItems;
 
     public NewsAdapter(Context context, int numberOfItems, ArrayList<News> news, ChangeStatusListener listener) {
         mNumberItems = numberOfItems;
@@ -30,18 +28,6 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
         this.context = context;
         this.listener = listener;
     }
-
-    class NewsViewHolder extends RecyclerView.ViewHolder {
-
-        final TextView listItemNumberView;
-
-        NewsViewHolder(View itemView) {
-            super(itemView);
-            listItemNumberView = itemView.findViewById(R.id.title);
-        }
-
-    }
-
 
     @NonNull
     @Override
@@ -54,7 +40,6 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
         return new NewsViewHolder(view);
 
     }
-
 
     //onBindViewHolder()
     @Override
@@ -72,15 +57,26 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
 
     }
 
+    @Override
+    public int getItemCount() {
+        mNumberItems = mNews.size();
+        return mNumberItems;
+    }
+
     public interface ChangeStatusListener {
         void ChangeStatus(News product);
 
     }
 
-    @Override
-    public int getItemCount() {
-        mNumberItems = mNews.size();
-        return mNumberItems;
+    class NewsViewHolder extends RecyclerView.ViewHolder {
+
+        final TextView listItemNumberView;
+
+        NewsViewHolder(View itemView) {
+            super(itemView);
+            listItemNumberView = itemView.findViewById(R.id.title);
+        }
+
     }
 
 }

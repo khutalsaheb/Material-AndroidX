@@ -1,6 +1,7 @@
 package com.example.introapp;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -10,6 +11,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.introapp.Tabs.TabbedView;
 import com.example.introapp.Temp.News;
 import com.example.introapp.Temp.NewsAdapter;
 import com.google.android.material.bottomappbar.BottomAppBar;
@@ -32,9 +34,7 @@ public class MainDrawerActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, NewsAdapter.ChangeStatusListener {
 
     private Advance3DDrawerLayout drawer;
-    private final int NUM_ITEMS = 100;
     private BottomSheetDialog bottomSheetDialog;
-    private BottomAppBar bar;
     private RecyclerView mNewsList;
 
     @Override
@@ -63,7 +63,7 @@ public class MainDrawerActivity extends AppCompatActivity
 
 
         //This will initialize the BottomAppBar
-        bar = findViewById(R.id.appbar);
+        BottomAppBar bar = findViewById(R.id.appbar);
 
         //This will add the OptionMenu to BottomAppBar
         bar.replaceMenu(R.menu.bottom_appbar_menu_primary);
@@ -132,19 +132,20 @@ public class MainDrawerActivity extends AppCompatActivity
                 int id = menuItem.getItemId();
                 switch (id) {
                     case R.id.item1:
-                        Toast.makeText(MainDrawerActivity.this, "Item 1 Clicked", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(getApplicationContext(), TabbedView.class));
+                        //  Toast.makeText(MainDrawerActivity.this, "Item 1 Clicked", Toast.LENGTH_SHORT).show();
                         bottomSheetDialog.dismiss();
                         break;
                     case R.id.item2:
-                        Toast.makeText(MainDrawerActivity.this, "Item 2 Clicked", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(getApplicationContext(), TabbedView.class));
                         bottomSheetDialog.dismiss();
                         break;
                     case R.id.item3:
-                        Toast.makeText(MainDrawerActivity.this, "Item 3 Clicked", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(getApplicationContext(), TabbedView.class));
                         bottomSheetDialog.dismiss();
                         break;
                     case R.id.item4:
-                        Toast.makeText(MainDrawerActivity.this, "Item 4 Clicked", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(getApplicationContext(), TabbedView.class));
                         bottomSheetDialog.dismiss();
                         break;
                 }
@@ -222,6 +223,7 @@ public class MainDrawerActivity extends AppCompatActivity
 
         // Don't change the size of the content
         mNewsList.setHasFixedSize(true);
+        int NUM_ITEMS = 100;
         NewsAdapter adapter = new NewsAdapter(getApplicationContext(), NUM_ITEMS, data, this);
 
         mNewsList.setAdapter(adapter);

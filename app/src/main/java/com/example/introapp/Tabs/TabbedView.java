@@ -22,24 +22,21 @@ import androidx.viewpager.widget.ViewPager;
 
 public class TabbedView extends AppCompatActivity {
     private static final String HI = "https://uniqueandrocode.000webhostapp.com/hiren/androidweb.php";
-    private TabAdapter tabAdapter;
-    private TabLayout tabLayout;
-    private ViewPager viewPager;
     private Session session;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tabbed_view);
-        viewPager = findViewById(R.id.pager);
-        tabLayout = findViewById(R.id.tablayout);
+        ViewPager viewPager = findViewById(R.id.pager);
+        TabLayout tabLayout = findViewById(R.id.tablayout);
         session = new Session(this);
-        tabAdapter = new TabAdapter(getSupportFragmentManager());
-        tabAdapter.addFragment(new Tab1Fragment(), "Tab 1");
-        tabAdapter.addFragment(new Tab2Fragment(), "Tab 2");
+        TabAdapter tabAdapter = new TabAdapter(getSupportFragmentManager());
+        tabAdapter.addFragment(new Tab1Fragment(), "Closed");
+        tabAdapter.addFragment(new Tab2Fragment(), "Open");
         viewPager.setAdapter(tabAdapter);
         tabLayout.setupWithViewPager(viewPager);
-
+        viewPager.setCurrentItem(1, false);
         getData();
 
     }

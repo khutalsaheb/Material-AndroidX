@@ -24,10 +24,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/marginall"
+        android:gravity="center"
         android:text="@string/slide_3_title"
         android:textColor="@android:color/white"
         android:textSize="@dimen/slide_title"
-        android:textStyle="bold"  android:gravity="center"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
@@ -37,14 +38,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/marginall"
+        android:gravity="center"
         android:paddingLeft="@dimen/desc_padding"
         android:paddingRight="@dimen/desc_padding"
-        android:text="@string/slide_3_desc"  android:gravity="center"
+        android:text="@string/slide_3_desc"
         android:textColor="@android:color/white"
         android:textSize="@dimen/slide_desc"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

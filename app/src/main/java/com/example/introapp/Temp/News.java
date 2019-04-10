@@ -11,17 +11,16 @@ public class News {
         this.image_url = image_url;
     }
 
+    public News(String title) {
+        mNewsTitle = title;
+    }
+
     public String getName() {
         return name;
     }
 
     public String getImage_url() {
         return image_url;
-    }
-
-
-    public News(String title) {
-        mNewsTitle = title;
     }
 
     public String getNewsTitle() {

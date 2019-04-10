@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    android:background="@color/colorPrimaryDark"
+    android:background="@color/primary_light"
     tools:context=".LoginActivity">
 
     <androidx.cardview.widget.CardView

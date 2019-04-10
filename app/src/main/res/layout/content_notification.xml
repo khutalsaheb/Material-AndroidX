@@ -11,12 +11,12 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_local_florist_black_24dp"
         android:drawableLeft="@drawable/ic_local_florist_black_24dp"
         android:drawablePadding="6dp"
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
-        android:text="Notification"
-        android:drawableStart="@drawable/ic_local_florist_black_24dp"
+        android:text="@string/notification"
         android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse" />
 
     <androidx.legacy.widget.Space
@@ -28,8 +28,5 @@
         android:layout_height="1dp"
         android:background="#6fff" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+    <include layout="@layout/recyclerview_layout" />
 </LinearLayout>
