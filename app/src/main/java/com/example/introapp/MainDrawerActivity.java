@@ -245,7 +245,7 @@ public class MainDrawerActivity extends AppCompatActivity
         toolbar.setTitle("Notification");
         toolbar.setTitleTextColor(Color.parseColor("#FFFFFF"));//for red colored toolbar title
         TextView title = bootomNavigation.findViewById(R.id.title);
-        title.setText(product.getNewsTitle());
+        title.setText(product.getName());
         bottomSheetDialog.setContentView(bootomNavigation);
 
         bottomSheetDialog.show();

@@ -46,7 +46,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
     public void onBindViewHolder(@NonNull NewsViewHolder holder, int position) {
         final News news = mNews.get(position);
         TextView textView = holder.listItemNumberView;
-        textView.setText(news.getNewsTitle());
+        textView.setText(news.getName());
         textView.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("InflateParams")
             @Override

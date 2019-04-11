@@ -1,29 +1,60 @@
 package com.example.introapp.Temp;
 
 public class News {
-
     private String name;
-    private String image_url;
-    private String mNewsTitle;
+    private String realname;
+    private String team;
+    private String firstappearance;
+    private String createdby;
+    private String publisher;
+    private String imageurl;
+    private String bio;
 
-    public News(String name, String image_url) {
+
+    public News(String name, String realname, String team, String firstappearance, String createdby, String publisher, String imageurl, String bio) {
         this.name = name;
-        this.image_url = image_url;
+        this.realname = realname;
+        this.team = team;
+        this.firstappearance = firstappearance;
+        this.createdby = createdby;
+        this.publisher = publisher;
+        this.imageurl = imageurl;
+        this.bio = bio;
     }
 
-    public News(String title) {
-        mNewsTitle = title;
+    public News(String name) {
+        this.name = name;
     }
 
     public String getName() {
         return name;
     }
 
-    public String getImage_url() {
-        return image_url;
+    public String getRealname() {
+        return realname;
     }
 
-    public String getNewsTitle() {
-        return mNewsTitle;
+    public String getTeam() {
+        return team;
+    }
+
+    public String getFirstappearance() {
+        return firstappearance;
+    }
+
+    public String getCreatedby() {
+        return createdby;
+    }
+
+    public String getPublisher() {
+        return publisher;
+    }
+
+    public String getImageurl() {
+        return imageurl;
+    }
+
+    public String getBio() {
+        return bio;
     }
 }
